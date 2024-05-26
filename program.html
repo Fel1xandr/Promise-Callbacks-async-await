@@ -62,7 +62,8 @@
 <script>
     document.getElementById("FindCityByName").addEventListener("click", UserInput)
     async function UserInput() {
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${document.getElementById("textInput").value}&lang=cz&appid=c89772582eaab89a98ef77e0ab539dc2&units=metric`;
+        let apikey = "" //vlastní api key
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${document.getElementById("textInput").value}&lang=cz&appid=${apikey}&units=metric`;
           
         try {
             let response =  await fetch(url);
